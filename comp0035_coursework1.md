@@ -2,8 +2,7 @@
 
 ## Technical information
 ### Repository URL
-Please add the URL to your repository below, then delete this instruction text.
-[Repository]()
+[Repository](https://github.com/14113p/-comp0035_cw1_2021-22.git)
 
 ### Set-up instructions
 
@@ -17,9 +16,11 @@ If the marker cannot execute your coursework they can't grade it!
 
 ## Selection of project methodology
 ### Methodology (or combination) selected
+Scrum/TDSP
 
 ### Selection criteria and justification of selection
-
+I have chosen this methodology as I already have some experience with Scrum, however as it is a also a data science project I would like to merge it with TDSP, for the benefit of both the project and my knowledge.
+I am also yet to decide the course of the project, so choosing an Agile methodology would allow me to work in small increments and change my plans on the fly if needed so. I am also relatively inexperienced when it comes to bigger projects so it would be nice to have a quantifiable progress in order to stay motivated and organised.
 
 ## Definition of the business need
 ### Problem definition
@@ -47,20 +48,19 @@ Please add names of your data set files in this repository below, then delete th
 ## Weekly progress reports
 Copy and paste from Moodle or use the following structure. Delete this instruction text.
 
+### Report 1
 What I did in the last week:
-- item
-- item
+- Chosen the methodology and written the justification 
+- Setup the IDE, integrated it with GitHub and setup a virtual environment
 
 What I plan to do in the next week:
-- item
-- item
+- solve the problem below
+- have an initial look at the data set
 
 Issues blocking my progress (state ‘None’ if there are no issues):
-- item
-- item
-
-### Report 1
-
+- can't run code using venv, have to test on global python installation. 
+    Reason: pip installing packages to wrong directory
+    
 ### Report 2
 
 ### Report 3
