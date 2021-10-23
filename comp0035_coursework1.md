@@ -24,10 +24,15 @@ I am also yet to decide the course of the project, so choosing an Agile methodol
 
 ## Definition of the business need
 ### Problem definition
-
+    The purpose is to investgate the relationship between movie's commercial/critical success and other variables such as length, genre, budget.
+    The app will serve as a market understanding tool and a reference point in popculture discussions
 ### Target audience
-
+    Movie Journalists,
+    Filmmakers looking for commercial success,
+    Normal people for entertainment/curiosity purposes
 ### Questions to be answered using the dataset
+    Is there a common attribute that the most succesful movies share?
+    How does the film's popularity change over time?
 
 ### Suggested web app
 
@@ -38,7 +43,7 @@ I am also yet to decide the course of the project, so choosing an Agile methodol
 
 ### Prepared data set
 Please add names of your data set files in this repository below, then delete this instruction text.
-[Original data set]()
+[Original data set](data\BFI_raw)
 [Prepared data set]()
 
 ### Data exploration
@@ -46,7 +51,6 @@ Please add names of your data set files in this repository below, then delete th
 [Data Exploration]()
 
 ## Weekly progress reports
-Copy and paste from Moodle or use the following structure. Delete this instruction text.
 
 ### Report 1
 What I did in the last week:
