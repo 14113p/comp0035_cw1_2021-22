@@ -48,7 +48,7 @@ Please add names of your data set files in this repository below, then delete th
 
 ### Data exploration
 
-[Data Exploration]()
+[Data Exploration](data_exploration.py)
 
 ## Weekly progress reports
 
@@ -64,8 +64,20 @@ What I plan to do in the next week:
 Issues blocking my progress (state ‘None’ if there are no issues):
 - can't run code using venv, have to test on global python installation. 
     Reason: pip installing packages to wrong directory
-    
+
 ### Report 2
+What I did in the last week:
+- Solved the package installation directory problem - venv was created and active for interpreting, but not properly activated for pip.
+- Defined the business need (WIP)
+- Downloaded the first batch of raw data, run first overview
+
+What I plan to do in the next week:
+- Have a deeper look into the data
+- Attempt to merge the datasheets into one
+- Have an initial look at the tmdb API
+
+Issues blocking my progress (state ‘None’ if there are no issues):
+- None
 
 ### Report 3
 
