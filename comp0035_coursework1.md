@@ -80,6 +80,18 @@ Issues blocking my progress (state ‘None’ if there are no issues):
 - None
 
 ### Report 3
+What I did in the last week:
+- Had a look at the additional libraries and APIs that may be useful (tmdb, glob, os)
+- Planned the process of data prep (not much code yet)
+
+What I plan to do in the next week:
+- Explore the data properly
+- Merge xls files into one
+- Make use of the tmdb
+
+Issues blocking my progress (state ‘None’ if there are no issues):
+- Merging process is imperfect, doesn't work yet
+- Still waiting to be attributed a tmdb API key
 
 ### Report 4
 
