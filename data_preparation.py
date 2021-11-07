@@ -2,59 +2,60 @@ from numpy import NaN
 import pandas
 import os
 import glob
+import datetime
 
 # get all the xls files in the folder
 datapath = './data/BFI_raw/'
-columns = ['Rank', 'Film', 'Country of Origin', 'Weekend Gross', 'Weeks on release', 'Number of cinemas', 'Site average','Total Gross to date'] # <= these are columns to read, info from exploration
+columns = ['Rank', 'Film', 'Weekend Gross', 'Weeks on release', 'Number of cinemas', 'Site average','Total Gross to date'] #columns to read
 
 xls_files = glob.glob( os.path.join( datapath, "*.xls") )
 
-#create an empty dataframe, import only column names
+#create an empty dataframe that will be output
 d_main = pandas.DataFrame()
 
 for a in xls_files:
-    #import another xls
     d_temp = pandas.read_excel( a, usecols=columns, skiprows = 1 )
 
-    ########clean the file
-
-    #drop lines starting with an empty cell
-
-    #d_temp[ d_temp['Rank'] == NaN].drop(axis = 0)
+    #drop lines starting with an empty cell (these are not film data)
     d_temp.dropna(subset = ['Rank','Film'], inplace = True)
 
     #merge it with the main one
-
     d_main = pandas.concat( [d_main, d_temp], ignore_index=True )
 
-#drop the column added by concat and the rank column, was needed only to recognise actual film info
-
+#drop the rank column, was needed only to recognise actual film info
 d_main.drop( 'Rank', axis = 1, inplace = True )
 
-#remove premieres older than 112 (2 years) weeks, to exclude special screenings (these usually include only commercially succesful movies, what would skew the analysis)
 
-#############################################################
-####    tmdb   API part
-#############################################################
-
+####   tmdb API part    #####
+#############################
 import tmdbsimple as tmdb
 tmdb.API_KEY = 'd9a2c308dbb2a7268990206ecf3028cf'
+d_temp = pandas.DataFrame()
+d_temp['API Genres'] = None
 search = tmdb.Search()
 
-for index, row in d_main.iterrows():
+for ind, row in d_main.iterrows():
 
-    print( "Quering for entry " + str(index + 1) + " out of " + str(len(d_main.index)) )
+    print( "Quering for entry " + str(ind + 1) + " out of " + str(len(d_main.index)) )
 
     search.movie( language='en', query = row['Film'] )
 
-    if search.results:
         #add genre, length, release date and rating
-        print( index )
-        a = search.results[0]
-        d_main.at[index, 'API Title'] = a['title']
-        ################row['API length'] = a['runtime']
-        ################d_main['API genres'] = a['genre_ids']
-        #d_main.ix[index, 'API Rating'] = a['rating']
+    if search.results:
+        movie_object = tmdb.Movies( search.results[0]['id'] )
+        movie_info = movie_object.info()
+        d_main.at[ind, 'API Title'] = movie_info['title']
+        d_main.at[ind, 'API length'] = movie_info['runtime']        
+        if movie_info['vote_count'] > 5: d_main.at[ind, 'API Rating'] = movie_info['vote_average'] 
+        if movie_info['budget'] != 0: d_main.at[ind, 'API Budget'] = movie_info['budget']
+        d_main.at[ind, 'API Release Date'] = movie_info['release_date']
+        genres = []
+        for i in movie_info['genres']:
+                genres.append( i['name'] )
+        d_temp.loc[ind, 'API Genres'] = genres
+
+# 
+d_main = pandas.concat( [d_main, d_temp], axis=1, join='inner')
 
 #drop films not found by the API (these are mostly  rescreenings anyway, as they have additional text, such as '(30th Anniversary)')
 #print( d_main[ d_main['API Title'].isnull() ] )    # <== Proof

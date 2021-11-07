@@ -94,6 +94,13 @@ Issues blocking my progress (state ‘None’ if there are no issues):
 - Still waiting to be attributed a tmdb API key
 
 ### Report 4
+What I did in the last week:
+
+What I plan to do in the next week:
+
+Issues blocking my progress (state ‘None’ if there are no issues):
+- Still waiting to be attributed an tmdb API key
+
 
 ## References
 Use any [referencing style](https://library-guides.ucl.ac.uk/referencing-plagiarism/referencing-styles) that you are
