@@ -40,7 +40,7 @@ for ind, row in d_main.iterrows():
 
     search.movie( language='en', query = row['Film'] )
 
-        #add genre, length, release date and rating
+    #add genre, length, release date and rating
     if search.results:
         movie_object = tmdb.Movies( search.results[0]['id'] )
         movie_info = movie_object.info()
@@ -57,12 +57,13 @@ for ind, row in d_main.iterrows():
 # 
 d_main = pandas.concat( [d_main, d_temp], axis=1, join='inner')
 
-#drop films not found by the API (these are mostly  rescreenings anyway, as they have additional text, such as '(30th Anniversary)')
+#drop films not found by the API and ones released before 2016(either rescreenings or misassigned by the API)
 #print( d_main[ d_main['API Title'].isnull() ] )    # <== Proof
 
 d_main.dropna(subset = ['API Title'], inplace = True)
-
-##############################################################
+d_main = d_main.loc[ d_main['API Title'] == d_main['Film'] ]
+d_main['API Release Date'] = pandas.to_datetime(d_main['API Release Date'])
+d_main = d_main.loc[ d_main['API Release Date'].dt.year >= 2016 ]
 
 #export one xlsx file (newer format)
 d_main.to_excel( excel_writer = 'data/BFI_merged.xlsx' )
