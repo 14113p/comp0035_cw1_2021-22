@@ -4,15 +4,17 @@ Most students will use the same repository for coursework 2. You may use this fi
 coursework if you wish. Alternatively you can use video or audio to provide the explanations instead of writing them.
 
 ## Requirements definition and analysis
-The term 'requirements' is used in the broader sense, user stories and/or use cases may be used.
+
 ### Requirements identification methods
+brainstorming/observation of similar applications
+As while working on this project I could not gather information from other people (either potential users or other non-existent developers) I had to rely on my own ideas and experience.
 
 ### Requirement specification method
-
+user stories
 ### Prioritisation method
-
+MoSCoW technique
 ### Documented and prioritised requirements
-Link to the full list of documented and prioritised requirements.
+[Requirements file](design_requirements.md)
 
 
 ## Design
