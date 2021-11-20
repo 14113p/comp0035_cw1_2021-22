@@ -8,7 +8,6 @@ coursework if you wish. Alternatively you can use video or audio to provide the 
 ### Requirements identification methods
 brainstorming/observation of similar applications
 As while working on this project I could not gather information from other people (either potential users or other non-existent developers) I had to rely on my own ideas and experience.
-
 ### Requirement specification method
 user stories
 ### Prioritisation method
@@ -16,8 +15,8 @@ MoSCoW technique
 ### Documented and prioritised requirements
 [Requirements file](design_requirements.md)
 
-
 ## Design
+
 ### Structure and flow of the interface
 
 ### Relational database design
@@ -39,24 +38,17 @@ Consider using GitHub Actions (or other) to establish a continuous integration p
 
 ## Weekly progress reports
 
-Copy and paste from Moodle or use the following structure. Delete this instruction text.
-
+### Report 1
 What I did in the last week:
-
-- item
-- item
+- created some initial user stories
+- had an initial attempt of sketching wireframes (not final)
 
 What I plan to do in the next week:
-
-- item
-- item
+- create more user stories
+- finalize and digitalize the wireframes (at least the early-stage ones)
 
 Issues blocking my progress (state ‘None’ if there are no issues):
-
-- item
-- item
-
-### Report 1
+- temporarily lost access to my coursework file (github has an older version, should recover it before next week)
 
 ### Report 2
 
