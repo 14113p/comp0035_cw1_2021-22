@@ -51,16 +51,20 @@ Issues blocking my progress (state ‘None’ if there are no issues):
 - temporarily lost access to my coursework file (github has an older version, should recover it before next week)
 
 ### Report 2
+What I did in the last week:
+- initial version of the user flows
+- most of the planned wireframes
+- further user stories
+
+What I plan to do in the next week:
+- UML diagrams
+- review project's direction and the progress so far
+
+Issues blocking my progress (state ‘None’ if there are no issues):
+- None
 
 ### Report 3
 
 ### Report 4
 
 ## References
-
-Delete this instruction text before submitting:
-
-- Include references to any templates you have used.
-- If you justify any of your choices with references then remember to also include these.
-- Use any [referencing style](https://library-guides.ucl.ac.uk/referencing-plagiarism/referencing-styles) that you are
-  used to using in your course.
