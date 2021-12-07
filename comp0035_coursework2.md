@@ -64,6 +64,15 @@ Issues blocking my progress (state ‘None’ if there are no issues):
 - None
 
 ### Report 3
+What I did in the last week:
+- UML Class diagram
+- UML deployment diagram
+
+What I plan to do in the next week:
+- approach testing and database design
+
+Issues blocking my progress (state ‘None’ if there are no issues):
+- None
 
 ### Report 4
 
