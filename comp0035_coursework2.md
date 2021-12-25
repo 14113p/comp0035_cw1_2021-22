@@ -18,7 +18,8 @@ MoSCoW technique
 ## Design
 
 ### Structure and flow of the interface
-
+[Wireframes](design\wireframes)
+[User Flows](design\user_flows.png)
 ### Relational database design
 
 ### Application structure
@@ -75,5 +76,13 @@ Issues blocking my progress (state ‘None’ if there are no issues):
 - None
 
 ### Report 4
+What I did in the last week:
+- ER diagram
+- designed tests
 
-## References
+What I plan to do in the next week:
+- debug and run tests
+
+Issues blocking my progress (state ‘None’ if there are no issues):
+- buggs while attempting to test
+- Complications of personal nature
