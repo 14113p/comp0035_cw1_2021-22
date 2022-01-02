@@ -1,116 +1,89 @@
-# Coursework 1
+# Coursework 2
 
-## Technical information
-### Repository URL
-[Repository](https://github.com/14113p/-comp0035_cw1_2021-22.git)
+## Requirements definition and analysis
 
-### Set-up instructions
+### Requirements identification methods
+brainstorming/observation of similar applications
+As while working on this project I could not gather information from other people (either potential users or other non-existent developers) I had to rely on my own ideas and experience.
+### Requirement specification method
+user stories
+### Prioritisation method
+MoSCoW technique
+### Documented and prioritised requirements
+[Requirements file](design_requirements.md)
 
-Assume that requirements will be installed from requirements.txt.
+## Design
 
-If you have used any libraries that require set-up beyond `pip install ...` then use this section to explain any set-up
-instructions to be followed to run your coursework.
+### Structure and flow of the interface
+[Wireframes](design\wireframes)
+[User Flows](design\user_flows.png)
+### Relational database design
+[Database design](design\db_design.png)
+### Application structure
+[ERD](design\er_diagram.png)
+[UML Class Diagram](design\class_diagram.png)
+[Deployment Diagram](design\deployment_diagram.png)
 
-If the marker cannot execute your coursework they can't grade it!
+*All the wireframes were created using the [Moqups](https://moqups.com) service <br/>
+Other software used for the design stage: [Lucid Chart](https://lucidchart.com), [Visual Paradigm](https://online.visual-paradigm.com)
 
+## Testing
+### Choice of unit testing library
+pytest
+### Tests
+[Test File](test\test_user.py)
+### Test results
+[Proof](proof_of_testing.png)
 
-## Selection of project methodology
-### Methodology (or combination) selected
-Scrum/TDSP
-
-### Selection criteria and justification of selection
-I have chosen this methodology as I already have some experience with Scrum, however as it is a also a data science project I would like to merge it with TDSP, for the benefit of both the project and my knowledge.
-I am still relatively inexperienced when it comes to bigger projects so it would be nice to have a quantifiable progress in order to stay motivated and organised. I am also yet to decide the exact course of the project, so choosing an Agile methodology would allow me to work in small increments and change my plans on the fly if needed to do so.
-
-## Definition of the business need
-### Problem definition
-    A movie's success or failure often seems to be a matter of chance. It especially impoortant for people involved in movie's production. There is a need for an easily available way of seeing current/historical trends in the film industry.
-    The purpose is to visualise the relationship between movie's commercial/critical success and other variables such as length, genre, budget. This would allow to better understand tastes of the general public and could be used when making commercial decisions.
-    For the casual/semicasual users, the app will serve as a market understanding tool and a reference point in the popculture discussions.
-### Target audience
-    - Filmmakers looking for commercial success
-    - Film industry enthusiasts
-    - Movie Journalists
-[The_Filmmaker](personas\filmmaker.pdf)
-[The_Movie_Enthusiast](personas\m_enthusiast.pdf)
-[The_Journalist](personas\journalist.pdf)
-### Questions to be answered using the dataset
-    - Is there a common attribute that the most succesful movies share?
-    - How does the film's popularity change over time? Does the patternt differ by genre?
-    - Was there a noticable change in average movie reception at the time of important events (i.e. pandemic)? 
-    - Are movies of particular genre/length/release_date more successful than the others?
-    - What is the relationship between movie's rating/revenue and budget?
-    - Does original language being other than English influence movie's reception?
-
-### Suggested web app
-
-## Data preparation and exploration
-### Data preparation
-[Data Preparation](data_preparation.py)
-
-### Prepared data set
-[Original data set](data\BFI_raw)
-[Prepared data set](data\BFI_merged.xlsx)
-
-### Data exploration
-[Data Exploration](data_exploration.py)
+### Continuous integration (optional)
+Consider using GitHub Actions (or other) to establish a continuous integration pipeline. If you do so then please provide a link to the .yml and a screenshot of the results of a workflow run.
 
 ## Weekly progress reports
 
 ### Report 1
 What I did in the last week:
-- Chosen the methodology and written the justification 
-- Setup the IDE, integrated it with GitHub and setup a virtual environment
+- created some initial user stories
+- had an initial attempt of sketching wireframes (not final)
 
 What I plan to do in the next week:
-- solve the problem below
-- have an initial look at the data set
+- create more user stories
+- finalize and digitalize the wireframes (at least the early-stage ones)
 
 Issues blocking my progress (state ‘None’ if there are no issues):
-- can't run code using venv, have to test on global python installation. 
-    Reason: pip installing packages to wrong directory
+- temporarily lost access to my coursework file (github has an older version, should recover it before next week)
 
 ### Report 2
 What I did in the last week:
-- Solved the package installation directory problem - venv was created and active for interpreting, but not properly activated for pip.
-- Defined the business need (WIP)
-- Downloaded the first batch of raw data, run first overview
+- initial version of the user flows
+- most of the planned wireframes
+- further user stories
 
 What I plan to do in the next week:
-- Have a deeper look into the data
-- Attempt to merge the datasheets into one
-- Have an initial look at the tmdb API
+- UML diagrams
+- review project's direction and the progress so far
 
 Issues blocking my progress (state ‘None’ if there are no issues):
 - None
 
 ### Report 3
 What I did in the last week:
-- Had a look at the additional libraries and APIs that may be useful (tmdb, glob, os)
-- Planned the process of data prep (not much code yet)
+- UML Class diagram
+- UML deployment diagram
 
 What I plan to do in the next week:
-- Explore the data properly
-- Merge xls files into one
-- Make use of the tmdb
-
-Issues blocking my progress (state ‘None’ if there are no issues):
-- Merging process is imperfect, doesn't work yet
-- Still waiting to be attributed a tmdb API key
-
-### Report 4
-What I did in the last week:
-- Prepared the data
-- Merged the files
-- Included the API data
-
-What I plan to do in the next week:
-- Polish methodology and target audience sections
-- Plot some graphs in the exploration part
+- approach testing and database design
 
 Issues blocking my progress (state ‘None’ if there are no issues):
 - None
 
-## References
-Use any [referencing style](https://library-guides.ucl.ac.uk/referencing-plagiarism/referencing-styles) that you are
-used to using in your course.
+### Report 4
+What I did in the last week:
+- ER diagram
+- designed tests
+
+What I plan to do in the next week:
+- debug and run tests
+
+Issues blocking my progress (state ‘None’ if there are no issues):
+- buggs while attempting to test
+- Complications of personal nature
