@@ -1,8 +1,5 @@
 # Coursework 2
 
-Most students will use the same repository for coursework 2. You may use this file to present the results of that
-coursework if you wish. Alternatively you can use video or audio to provide the explanations instead of writing them.
-
 ## Requirements definition and analysis
 
 ### Requirements identification methods
@@ -21,18 +18,22 @@ MoSCoW technique
 [Wireframes](design\wireframes)
 [User Flows](design\user_flows.png)
 ### Relational database design
-
+[Database design](design\db_design.png)
 ### Application structure
+[ERD](design\er_diagram.png)
+[UML Class Diagram](design\class_diagram.png)
+[Deployment Diagram](design\deployment_diagram.png)
 
+*All the wireframes were created using the [Moqups](https://moqups.com) service <br/>
+Other software used for the design stage: [Lucid Chart](https://lucidchart.com), [Visual Paradigm](https://online.visual-paradigm.com)
 
 ## Testing
 ### Choice of unit testing library
-
+pytest
 ### Tests
-The tests should be in a separate and appropriately named file/directory.
-
+[Test File](test\test_user.py)
 ### Test results
-Provide evidence that the tests have been run and the results of the tests (e.g. screenshot).
+[Proof](proof_of_testing.png)
 
 ### Continuous integration (optional)
 Consider using GitHub Actions (or other) to establish a continuous integration pipeline. If you do so then please provide a link to the .yml and a screenshot of the results of a workflow run.
